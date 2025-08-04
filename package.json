@@ -11,6 +11,6 @@
   "type": "commonjs",
   "description": "",
   "dependencies": {
-    "brainblocks.js": "^1.0.18"
+    "brainblocks.js": "^1.0.19"
   }
 }
