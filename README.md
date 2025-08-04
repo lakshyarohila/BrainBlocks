@@ -1,49 +1,81 @@
-# 🧠 BrainBlocks
-
-> **Build your brain, one block at a time.**
-
-**BrainBlocks** is a fun and educational JavaScript library that helps you learn and use **Data Structures and Algorithms (DSA)** through creative naming, real logic (no shortcuts), and joyful CLI features like jokes and ASCII logos.
+<h1 align="center">🧠 BrainBlocks</h1>
+<p align="center">A fun, beginner-friendly JavaScript DSA library — build your brain, one block at a time!</p>
 
 ---
 
-## 🚀 What Is BrainBlocks?
+## 🚀 Overview
 
-Instead of intimidating terms like `Stack` or `Queue`, BrainBlocks uses friendly, beginner-focused names:
+**BrainBlocks** is a playful and educational JavaScript library for learning and using Data Structures and Algorithms (DSA).  
+It uses memorable names like:
 
-| DSA Concept | BrainBlocks Name | Real-Life Analogy     |
-|-------------|------------------|------------------------|
-| Stack       | `Backpack`       | Packing/unpacking bag |
-| Queue       | `Line`           | People in a line      |
-
-It also includes **CLI tools** like `intro()`, `quote()`, and `joke()` to keep learning motivating and fun.
+- 🎒 `Backpack` → Stack  
+- 📍 `Line` → Queue  
+- 🎉 ASCII CLI Utilities (intro, logo, quote, joke, etc.)
 
 ---
 
 ## 📦 Installation
 
 ```bash
-npm install brainblocks
+npm install brainblocks.js
 
 
-// index.js
-const brain = require('brainblocks');
+| Function     | Output                             |
+| ------------ | ---------------------------------- |
+| `intro()`    | Prints welcome message             |
+| `logo()`     | BrainBlocks ASCII banner logo      |
+| `say("msg")` | Prints 🧱 followed by your message |
+| `quote()`    | Random DSA quote in a box          |
+| `joke()`     | Random developer joke              |
+| `motivate()` | Prints encouragement               |
 
-// CLI welcome
+
+const brain = require('brainblocks.js');
+
 brain.intro();
 brain.logo();
-brain.say("Let’s learn data structures!");
+brain.say("Let's master DSA!");
+brain.quote();
 
-// Use Backpack (Stack)
-const bag = new brain.Backpack(2);
-bag.pack("📘 DSA Book");
-bag.pack("📝 Notebook");
-console.log("Top item:", bag.peek());
-bag.unpack();
-console.log("Now top item:", bag.peek());
+| Method       | Description                    |
+| ------------ | ------------------------------ |
+| `pack(item)` | Push item onto the stack       |
+| `unpack()`   | Pop the top item               |
+| `peek()`     | View top item without removing |
+| `isEmpty()`  | Check if the stack is empty    |
+| `size()`     | Number of items in the stack   |
 
-// Use Line (Queue)
+
+*** how to use it ***
+
+
+const brain = require('brainblocks.js');
+const bag = new brain.Backpack(3);
+
+bag.pack("📘 Book");
+bag.pack("📝 Notes");
+console.log(bag.peek()); // 📝 Notes
+bag.unpack();            // Removes Notes
+console.log(bag.peek()); // 📘 Book
+
+
+***Queue***
+
+| Method       | Description                      |
+| ------------ | -------------------------------- |
+| `join(item)` | Add item to the end of queue     |
+| `leave()`    | Remove item from the front       |
+| `peek()`     | View first item without removing |
+| `isEmpty()`  | Check if queue is empty          |
+| `size()`     | Number of items in the queue     |
+
+
+
+
+
 const line = new brain.Line(2);
 line.join("Alice");
 line.join("Bob");
-console.log("First in line:", line.peek());
+console.log(line.peek()); // Alice
 line.leave();
+console.log(line.peek()); // Bob

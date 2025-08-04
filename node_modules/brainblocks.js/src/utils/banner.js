@@ -11,4 +11,4 @@ function say(msg) {
   console.log(`🧱 ${msg}`);
 }
 
-module.exports = { intro, logo, say };
+module.exports = { intro,  say };
